@@ -1,16 +1,15 @@
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: unset; /* Disable smooth scroll */
 }
 
-
-
-/* Reset */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Global styles for body and html */
 body, html {
     height: 100%;
     font-family: 'Times New Roman', Times, serif;
@@ -18,9 +17,9 @@ body, html {
     color: rgb(255, 255, 255);
 }
 
-/* Video de fondo */
+/* Background video settings */
 #video-background {
-    position: fixed !important; /* Ocupa toda la pantalla */ 
+    position: fixed !important; /* Fullscreen fixed video */
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -33,10 +32,10 @@ body, html {
     opacity: 0.7;
 }
 
-/* Header */
+/* Header styles */
 header {
     padding: 20px 0;
-     position: relative;
+    position: relative;
     z-index: 1;
     text-align: center;
     padding: 20px;
@@ -49,11 +48,12 @@ header h1 {
     color: #000000;
 }
 
-header h1:hover{
+/* Hover effect on main title */
+header h1:hover {
     color: #ffffff98;
-
 }
 
+/* Logo container layout */
 .logo-container {
     display: flex;
     justify-content: center;
@@ -61,16 +61,19 @@ header h1:hover{
     padding: 20px 0;
 }
 
+/* Logo image size */
 #logo {
     width: 270px;
     height: auto;
 }
 
+/* Main title size */
 h1 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
 
+/* Subtitle styles */
 h2 {
     margin-top: 20px;
     text-transform: uppercase;
@@ -79,19 +82,21 @@ h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
+
+/* Navigation bar */
 nav {
-   
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px; 
+    height: 80px;
     z-index: 999;
 }
 
+/* Navigation links list */
 nav ul {
     list-style: none;
     position: fixed;
-    top: 20px; 
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -100,20 +105,21 @@ nav ul {
     padding: 10px 0;
     margin: 0;
 
-    /* Efecto de ocultar/mostrar */
+    /* Hide menu by default */
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
+/* Show menu when hover over nav */
 nav:hover ul {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* Estilo de los botones */
+/* Navigation link buttons */
 nav ul li a {
-    background: rgba(0, 0, 0, 0.7); /* Botones oscuros */
+    background: rgba(0, 0, 0, 0.7); /* Dark buttons */
     padding: 10px 20px;
     border-radius: 8px;
     border: 1px solid #fff;
@@ -122,13 +128,13 @@ nav ul li a {
     font-size: 1.2rem;
 }
 
+/* Hover effect on nav links */
 nav ul li a:hover {
     background: rgba(255, 255, 255, 0.8);
     color: #000;
 }
 
-
-/* Sección About Me */
+/* About Me section */
 .about-section {
     width: 100%;
     padding: 180px 100px;
@@ -136,6 +142,7 @@ nav ul li a:hover {
     box-shadow: #000000;
 }
 
+/* About section layout */
 .about-container {
     display: flex;
     align-items: center;
@@ -143,9 +150,10 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     gap: 40px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
+/* Text container in About */
 .about-text {
     flex: 1;
     min-width: 300px;
@@ -167,7 +175,7 @@ nav ul li a:hover {
     color: #000000;
 }
 
-/* Imagen */
+/* Image in About section */
 .about-image {
     flex: 1;
     text-align: center;
@@ -181,12 +189,13 @@ nav ul li a:hover {
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
+/* Hover effect on developer image */
 #dev:hover {
     transform: scale(1.05) rotate(10deg);
     box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
 
-
+/* Responsive adjustments for About section */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column-reverse;
@@ -198,47 +207,43 @@ nav ul li a:hover {
     }
 }
 
-/* Main sections */
+/* General section styles */
 main section {
     width: 100%;
-    margin-top: 300px; 
-    padding: 100px; 
+    margin-top: 300px;
+    padding: 100px;
     background: rgba(255, 255, 255, 0);
     backdrop-filter: blur(5px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 0; 
+    border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.503);
 }
 
+/* Projects section */
 #Projects {
     width: 100%;
     margin-top: 0px !important;
-    padding: 100px; 
+    padding: 100px;
     background: rgba(0, 0, 0, 0.849);
     backdrop-filter: blur(5px);
-    border-radius: 0; 
+    border-radius: 0;
     box-shadow: 0 0 10px rgba(231, 228, 228, 0.781);
 }
-#Projects h2{
-     font-size: 2.5rem;
+
+#Projects h2 {
+    font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 10px;
     margin-bottom: 80px;
-
 }
 
-
+/* Skills section */
 #skills {
     width: 100%;
     margin-top: 0px !important;
-    padding: 10px; 
+    padding: 10px;
     box-shadow: 0 0 10px rgba(21, 255, 0, 0.568);
-    border-radius: 0
-}
-
-
-/* Sección habilidades */
-#skills {
+    border-radius: 0;
     text-align: center;
     color: rgb(255, 255, 255);
 }
@@ -256,6 +261,7 @@ main section {
     letter-spacing: 1px;
 }
 
+/* Each skill block */
 .skill {
     margin-bottom: 20px;
 }
@@ -268,9 +274,7 @@ main section {
     letter-spacing: 1px;
 }
 
-
-
-/* Galería tipo carrusel */
+/* Gallery section */
 .gallery {
     display: flex;
     overflow-x: auto;
@@ -279,10 +283,12 @@ main section {
     scroll-snap-type: x mandatory;
 }
 
+/* Hide gallery scrollbar */
 .gallery::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
 
+/* Each project card */
 .gallery-item {
     flex: 0 0 auto;
     width: 300px;
@@ -299,6 +305,7 @@ main section {
     transform: scale(1.05);
 }
 
+/* Project image */
 .gallery-item img {
     width: 100%;
     height: 200px;
@@ -307,7 +314,7 @@ main section {
     background-color: rgb(255, 255, 255);
 }
 
-/* Título del proyecto */
+/* Project title */
 .gallery-item h3 {
     font-size: 1.2rem;
     font-weight: bold;
@@ -315,7 +322,7 @@ main section {
     color: rgb(255, 255, 255);
 }
 
-/* Descripción */
+/* Project description */
 .gallery-item p {
     font-size: 0.95rem;
     margin-bottom: 10px;
@@ -323,7 +330,7 @@ main section {
     line-height: 1.4;
 }
 
-/* Botón de enlace */
+/* Project button */
 .gallery-item a {
     display: inline-block;
     text-decoration: none;
@@ -340,10 +347,7 @@ main section {
     color: #000000;
 }
 
-
-
-
-
+/* Progress bar styles */
 .progress-bar {
     position: relative;
     height: 20px;
@@ -370,31 +374,32 @@ main section {
     color: rgb(255, 255, 255);
 }
 
-
+/* Paragraph styles */
 p {
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-#Contact{
+/* Contact section */
+#Contact {
     width: 100%;
-    margin-top: 0; 
-    padding: 160px; 
+    margin-top: 0;
+    padding: 160px;
     background: rgba(0, 0, 0, 0.61);
     backdrop-filter: blur(5px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 0; 
+    border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.503);
 }
 
-#Contact h2{
-     font-size: 2.5rem;
+#Contact h2 {
+    font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 10px;
     margin-bottom: 80px;
-
 }
 
+/* Form styles */
 form {
     width: 800px;
     margin: 0 auto;
@@ -408,7 +413,6 @@ form input, form textarea, form button {
     margin-bottom: 10px;
     border-radius: 2px;
     border-color: #000000;
-    
 }
 
 form button {
@@ -418,22 +422,21 @@ form button {
     width: 100px;
 }
 
-form button:hover{
+form button:hover {
     background: #9a9898da;
     color: #000000;
 }
 
-
 /* Footer */
 footer {
-    margin-top:0px;
+    margin-top: 0px;
     text-align: center;
     padding: 90px;
     background-color: rgb(138, 136, 136);
     color: #ffff;
-    
 }
 
+/* Timeline section with video background */
 .video2 {
     margin: 0;
     position: relative;
@@ -442,9 +445,10 @@ footer {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
+/* Timeline video */
 #video-background {
     position: absolute;
     top: 50%;
@@ -459,7 +463,7 @@ footer {
     opacity: 1.9;
 }
 
-
+/* Timeline container */
 .timeline-container {
     position: relative;
     max-width: 800px;
@@ -468,6 +472,7 @@ footer {
     z-index: 1;
 }
 
+/* Timeline line */
 .timeline-container::before {
     content: "";
     position: absolute;
@@ -479,6 +484,7 @@ footer {
     background-color: #1a9916d5;
 }
 
+/* Timeline items */
 .timeline-item {
     position: relative;
     width: 50%;
@@ -496,6 +502,7 @@ footer {
     text-align: left;
 }
 
+/* Timeline dots */
 .timeline-dot {
     position: absolute;
     top: 20px;
@@ -507,6 +514,7 @@ footer {
     border-radius: 50%;
 }
 
+/* Timeline text content */
 .timeline-content {
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -531,6 +539,7 @@ footer {
     line-height: 1.3;
 }
 
+/* Video in timeline */
 .video2 video {
     position: absolute;
     top: 50%;
@@ -543,36 +552,3 @@ footer {
     object-fit: cover;
     z-index: -1;
 }
-
-
-
-/* Table 
-table {
-    width: 100%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.274);
-}
-
-th, td {
-    padding: 40px;
-    border: 1px solid white;
-    text-align: center;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: #fffffff0;
-    padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.624);
-    border: 1px solid #000000;
-    border-radius: 8px;
-}
-
-a:hover {
-    text-decoration: underline;
-    background: #e8e2e2da;
-    color: #000000;
-}
-*/
